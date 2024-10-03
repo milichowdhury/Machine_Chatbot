@@ -10,7 +10,10 @@ from bot import ChatBot
 # Load environment variables from .env file
 load_dotenv("../.env")
 
-
+# Configure logging
+logging.basicConfig(filename='chatbot.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger()
+logger.addHandler(logging.FileHandler('chatbot.log'))
 
 MAX_ITER = 5
 schema_table_pairs = []
