@@ -10,6 +10,8 @@ from bot import ChatBot
 # Load environment variables from .env file
 load_dotenv("../.env")
 
+
+
 MAX_ITER = 5
 schema_table_pairs = []
 
