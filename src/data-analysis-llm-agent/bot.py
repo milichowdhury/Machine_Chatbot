@@ -76,8 +76,13 @@ class ChatBot:
         # Log each tool call object separately
         for res in function_responses:
             #logging.info(f"Tool Call: {res}")
+            pass
 
         self.messages.extend(responses_in_str)
 
         response_message = await self.execute()
         return response_message, function_responses
+
+
+
+
