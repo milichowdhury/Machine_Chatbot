@@ -81,7 +81,3 @@ class ChatBot:
 
         response_message = await self.execute()
         return response_message, function_responses
-
-
-
-
