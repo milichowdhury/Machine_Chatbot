@@ -1,9 +1,9 @@
 import asyncio
-#import logging
+import logging
 import os
 import json
 
-#logging.info(f"User message")
+logging.info(f"User message")
 
 import httpx
 from groq import AsyncGroq
@@ -32,8 +32,8 @@ class ChatBot:
         if response_message.content:
             self.messages.append({"role": "assistant", "content": response_message.content})
 
-       # logging.info(f"User message: {message}")
-       # logging.info(f"Assistant response: {response_message.content}")
+        logging.info(f"User message: {message}")
+        logging.info(f"Assistant response: {response_message.content}")
 
         return response_message
 
@@ -75,8 +75,7 @@ class ChatBot:
 
         # Log each tool call object separately
         for res in function_responses:
-            #logging.info(f"Tool Call: {res}")
-            pass
+            logging.info(f"Tool Call: {res}")
 
         self.messages.extend(responses_in_str)
 
